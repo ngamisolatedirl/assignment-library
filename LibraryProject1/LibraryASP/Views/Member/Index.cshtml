@@ -1,0 +1,26 @@
+﻿@model List<LibraryData.Models.Member>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <tr>
+        <th>MemberId</th>
+        <th>Fullname</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.MemberId</td>
+            <td>@item.FulltName</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+        </tr>
+    }
+</table>
